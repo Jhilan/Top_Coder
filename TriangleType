@@ -1,0 +1,19 @@
++import java.util.Arrays;
++
++public class TriangleType {
++  public String type(int x, int y, int z) {
++		String ans="";
++		int[] all =new int[3];
++		all[0]=x; all[1]=y; all[2]=z;
++		Arrays.sort(all);
++		x=all[0]; y=all[1]; z=all[2];
++		
++		if((x + y) <= z) return "IMPOSSIBLE";
++		if(((x*x) + (y*y)) == (z*z))return "RIGHT";
++	    if ((x*x) + (y*y) < z*z) return "OBTUSE";
++	    if ((x*x) + (y*y) > z*z) return "ACUTE";
++			
++		
++		return ans;
++	}
++}
